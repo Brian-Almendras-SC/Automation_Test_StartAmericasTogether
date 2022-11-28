@@ -1,4 +1,4 @@
-Feature: 
+Feature: Log-in with account
     As User
     I want to log-in into START AMERICAS TOGETHER WEB PAGE
     So that into to START AMERICAS TOGETHER WEB PAGE
