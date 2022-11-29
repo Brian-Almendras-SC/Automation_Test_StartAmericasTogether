@@ -32,3 +32,7 @@ Then('I press the button {string}') do |string|
   xpath = '//*[@id="root"]/div[2]/div[1]/div/div[2]/div[2]/div/form/div/button'
   find(:xpath, xpath).click;
 end
+
+Then('the bottom log in change for {string}') do |tittle|
+  find('span', text: tittle)
+end

@@ -7,8 +7,8 @@ require 'capybara-screenshot/cucumber'
 Capybara.app_host = ENV["CAPYBARA_HOST"]
 #Account
 ENV['USERL']='lider@gmail.com'
-ENV['USERV']='coreteam@gmail.com'
-ENV['USERC']='voluntario@gmail.com'
+ENV['USERV']='voluntario@gmail.com'
+ENV['USERC']='coreteam@gmail.com'
 ENV['PASS']='123456'
 
 Capybara.default_max_wait_time = 15
