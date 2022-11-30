@@ -6,3 +6,7 @@ end
 Before '@maximize' do
 page.driver.browser.manage.window.maximize
 end
+
+Before do
+  page.driver.browser.manage.window.maximize
+  end

@@ -9,7 +9,7 @@ Scenario Outline: Log into the system with multiple Users
     And Press over option iniciar sesion
     When I enter the field User id and fill with my "<User>"
     And I enter the field Contraseña and fill with my "<PASS>"
-    Then I press the button "Iniciar Sesión"
+    Then I click in the option "Iniciar Sesión"
     And the bottom log in change for "<Initial>"
 
 Examples:

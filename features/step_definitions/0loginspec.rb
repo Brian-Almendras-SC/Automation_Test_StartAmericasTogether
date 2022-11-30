@@ -28,9 +28,22 @@ When('I enter the field Contraseña and fill with my {string}') do |pass|
   end
 end
 
-Then('I press the button {string}') do |string|
-  xpath = '//*[@id="root"]/div[2]/div[1]/div/div[2]/div[2]/div/form/div/button'
-  find(:xpath, xpath).click;
+Given('I click in the option {string}') do |arg1|
+  if(arg1 == "Iniciar Sesión")
+    xpath = '//*[@id="root"]/div[2]/div[1]/div/div[2]/div[2]/div/form/div/button'
+  elsif(arg1 == "Unete a Start")
+    xpath = '//*[@id="root"]/div[2]/div[1]/section/div[1]/div/div[2]/button[1]/span[1]'
+  elsif(arg1 == "Proyectos")
+    xpath = '/html/body/div[1]/div[2]/header/div[2]/div/button[2]/span/span'
+  elsif(arg1 == "Eventos")
+    xpath = '//*[@id="root"]/div[2]/header/div[2]/div/button[3]'
+  elsif(arg1 == "Cuenta")
+    xpath = '//*[@id="root"]/div[2]/header/div[2]/div/button[4]'
+  elsif(arg1 == "Usuarios")
+    xpath = '/html/body/div[1]/div[2]/header/div[2]/div/button[5]'
+  end
+  
+  find(:xpath, xpath).click
 end
 
 Then('the bottom log in change for {string}') do |tittle|

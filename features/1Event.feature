@@ -7,11 +7,10 @@ Background: loged as a Lider User
     And Press over option iniciar sesion
     And I enter the field User id and fill with my "lider"
     And I enter the field Contraseña and fill with my "LPASS"
-    And I press the button "Iniciar Sesión"
+    And I click in the option "Iniciar Sesión"
 
 Scenario: As a lider i want follow any event creted
     When I click in the option "Eventos"
     And I find "Edited By Automated Test"
-    Then I click over Detalles 
-    And Show details page about this event
-    And I view 
+    Then Press the "Detalles" button of card "Edited By Automated Test"
+    And should show te tittle "Edited By Automated Test"
