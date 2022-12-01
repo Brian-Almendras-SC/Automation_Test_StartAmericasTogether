@@ -1,6 +1,6 @@
-  When('I find {string}') do |string|
-    page.find('span', text: string,match: :first).hover
-    #puts "ha"
+  When('And The {string} page is displayed ') do |string|
+    expect(page).to have_content("EVENTOS VIGENTES")
+
   end
   
   #Then('I click over Detalles') do
@@ -10,10 +10,14 @@
   #end
 Then("Press the {string} button of card {string}") do |buttonName, eventName|
   action=buttonName +"_"+ eventName
-  action1 = driver.find_elements_by_class_name(action)
+  #action1 = driver.find_elements_by_class_name(action)
   #~·sleep(50)
   #action=buttonName +"_"+ eventName
-  action1.click();
+  scroll_to(find(:button,name: action, match: first))
+  
+  #puts res
+  #res=find_button(name: action)
+  #find(:button,name: "Detalles_♪ Feria musicial ♪♪").click
 end
 
 Then('should show te tittle {string}') do |string|
