@@ -1,6 +1,6 @@
-Feature: Register as new user
+Feature: Register as new volunteer
   In order to Register
-  As new user
+  As new volunteer
   I want to test the register option
   
 Scenario: Register a volunteer on site        
@@ -10,8 +10,8 @@ Scenario: Register a volunteer on site
 	  |Nombre: 	          | Pepito             |
     |Apellido: 	        | Perez              |
     |Phone: 	          | 6042251            |
-    |Email: 	          | pepe@pepazo.com    |
+    |Email: 	          | pepe@pepazoosaaaaaa.com    |
     |Password:          | PepeStart1         | 
     |Confirm Password:  | PepeStart1         |
 	Then send my registration form
-  And should redirect to Log In Page and show the title "Iniciar Sesión" 
+  And should redirect to Log In Page and show the title "Inicia Sesión" 

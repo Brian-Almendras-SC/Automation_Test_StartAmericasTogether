@@ -9,19 +9,16 @@ Given('I am on the Start Americas homepage') do
       case key
       when "Nombre:"
           fill_in 'username', :with => value
-          @name = value
       when "Apellido:"
         fill_in 'lastname', :with => value
       when "Email:"
         fill_in 'email', :with => value
-        @correo = value
       when "Phone:"
         fill_in 'phone', :with => value
       when "Password:"
         fill_in 'password', :with => value
       when "Confirm Password:"
         fill_in 'confirmPassword', :with => value
-        @password = value
       end
     end
   end
@@ -34,5 +31,5 @@ Given('I am on the Start Americas homepage') do
   
 
   Then('should redirect to Log In Page and show the title {string}') do | string |
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to have_content(string)
   end

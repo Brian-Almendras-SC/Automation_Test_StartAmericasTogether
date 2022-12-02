@@ -11,3 +11,4 @@ Background: loged as a Lider User
 
 Scenario:
     Then should be able to visualize the tittle "Tus Próximos Eventos"  
+
